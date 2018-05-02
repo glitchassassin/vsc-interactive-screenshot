@@ -1,0 +1,39 @@
+{
+    "name": "interactive-screenshots",
+    "displayName": "Interactive-Screenshots",
+    "description": "Capture screenshots, save to your current project, and embed the path to the file in the current editor",
+    "version": "0.0.1",
+    "publisher": "glitchassassin",
+    "engines": {
+        "vscode": "^1.22.0"
+    },
+    "categories": [
+        "Other"
+    ],
+    "activationEvents": [
+        "onCommand:extension.screenshot"
+    ],
+    "main": "./extension",
+    "contributes": {
+        "commands": [
+            {
+                "command": "extension.screenshot",
+                "title": "Insert Screenshot"
+            }
+        ]
+    },
+    "scripts": {
+        "postinstall": "node ./node_modules/vscode/bin/install",
+        "test": "node ./node_modules/vscode/bin/test"
+    },
+    "devDependencies": {
+        "typescript": "^2.6.1",
+        "vscode": "^1.1.6",
+        "eslint": "^4.11.0",
+        "@types/node": "^7.0.43",
+        "@types/mocha": "^2.2.42"
+    },
+    "dependencies": {
+        "short-uuid": "^3.0.0"
+    }
+}
