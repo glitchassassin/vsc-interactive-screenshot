@@ -2,7 +2,8 @@
     "name": "interactive-screenshots",
     "displayName": "Interactive-Screenshots",
     "description": "Capture screenshots, save to your current project, and embed the path to the file in the current editor",
-    "version": "0.0.1",
+    "repository": "https://github.com/glitchassassin/vsc-interactive-screenshot/",
+    "version": "0.0.2",
     "publisher": "glitchassassin",
     "engines": {
         "vscode": "^1.22.0"

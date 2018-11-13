@@ -23,7 +23,7 @@ function activate(context) {
             // Get current file's directory
             let target_dir = path.dirname(vscode.window.activeTextEditor.document.fileName)
             // Generate unique filename
-            let unique_file = "screenshot_" + short.uuid() + ".png"
+            let unique_file = "screenshot_" + (new Date).getTime() + ".png"
             // Hide VSC
             // Launch Minicap to capture screenshot and save
             exec(`${__dirname}\\MiniCap.exe -captureregselect -exit -escapequit -save \"${path.join(target_dir, unique_file)}\"`, (err, stdout, stderr) => {
@@ -32,7 +32,6 @@ function activate(context) {
                     vscode.window.showErrorMessage(err.message);
                     return
                 }
-                let screenshot = "screenshot_adea3f86-6ea1-40f5-ad77-d983cd740c62.png"
                 // Insert screenshot filename to current selection/cursor
                 if (!vscode.window.activeTextEditor.selection.isEmpty) {
                     for (let selection of vscode.window.activeTextEditor.selections) {
